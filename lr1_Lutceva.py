@@ -1,7 +1,7 @@
 import numpy as np
 import random
 import matplotlib.pyplot as plt
-
+# код решает задачу нахождения экстремума функции с помощью генетического алгоритма
 Q = 30              # количество поколений
 MAX_ENT = 10        # максимум сущностей в поколении
 MAX_CH = 4          # количетво детей в поколении
@@ -10,7 +10,6 @@ section = [0, 35]   # отрезок
 
 # заполенение начального поколения
 entity = [[random.randint(0, 1) for j in range(N)] for i in range(MAX_ENT)]
-# print(entity)
 
 # Функция фитнеса
 def fitness(x):
@@ -89,7 +88,6 @@ for p in range(Q):
     for i in range(len(entity)):
         x = metodGray(entity[i])
         fit[i] = fitness(x)
-    # print(len(fit))
     
     # отбор
     tmp_entity = []
