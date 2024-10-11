@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+	<head>
+		<title>ИСП лабораторные работы</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/header.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/contents.css">
+		<link rel="stylesheet" href="css/footer.css">
+	</head>
+
+	<body class="page">
+		<!-- Scripts -->
+		<script src="js/lab2.js"></script>
+
+		<!-- Header -->
+		<div class="header">
+
+			<div class="header-text">
+				<h1 class="header-text-h1">Лабораторные работы по ИСП</h1>
+				<p class="header-text-p">Сборник лабораторных работ по дисциплине "Инструментальные срества
+					программирования"</p>
+				<p class="header-text-work">Лютцева Анастасия гр. ПИЭ-12 вариант-13</p>
+			</div>
+
+		</div>
+
+		<!-- Лабораторная 2 -->
+		<div class="wrapper style3">
+			<div class="title">Лабораторная №2</div>
+			<div class="container">
+				<div class="assignment-to-work">
+					<p><strong>Задание к работе:</strong> реализовать линейный вычислительный процесс. Самостоятельно решить
+						задачу в соответствии с индивидуальным вариантом.</p>
+				</div>
+				<hr class="hr-shelf">
+				<div class="assignment">
+					<div class="assignment-text">
+						<h2><strong>Задание 1</strong></h2>
+						<p>Даны два круга с общим центром и радиусами R1 и R2 (R1 > R2). Найти площади этих кругов S1 и S2,
+							а также площадь S3 кольца, внешний радиус которого равен R1, а внутренний радиус равен R2: S1 =
+							π·(R1)^2, S2 = π·(R2)^2, S3 = S1−S2. В качестве значения π использовать 3.14.</p>
+						<button class="button style1" onclick="area_of_circle()">Решить задание</button>
+					</div>
+					<div class="assignment-code">
+						<code>
+//Ввод радиусов
+let R1 = prompt("Введите R1. Учтите, что R1 > R2", )
+let R2 = prompt("Введите R2. Учтите, что R1 > R2", )
+
+//Проверка на нулевые или неправильно введенные данные
+if ((R1>R2)&&(R2>0)) {
+	//Вычисление площадей
+	let S1 = 3.14 * R1 * R1
+	let S2 = 3.14 * R2 * R2
+	let S3 = S1 - S2
+	let rezult = 'Площадь S1 = ' + S1 + '\n' + 'Площадь S2 = ' + S2 + '\n' + 'Площадь S3 = ' + S3
+	alert(rezult)
+} else {
+	alert('Введите числа заново. R1 должен быть больше R2')
+}
+
+								</code>
+					</div>
+				</div>
+				<hr class="hr-shelf">
+				<div class="assignment">
+					<div class="assignment-text">
+						<h2><strong>Задание 2</strong></h2>
+						<p>Дано трехзначное число. В нем зачеркнули первую слева цифру и приписали ее справа. Вывести
+							полученное число.</p>
+						<button class="button style1" onclick="transposition()">Решить задание</button>
+					</div>
+					<div class="assignment-code">
+						<code>
+//Ввод трехзначного числа
+let number = prompt("Введите трехзначное число", )
+
+//Проверка на трехзначное число
+if (number.length == 3) {
+	// Перестановка цифр
+	rezult = number[1] + number[2] + number[0]
+	alert('Число  ' + number + '  после перестановки ' + rezult)
+} else {
+	alert('Ошибка. Введите трехзначное число.')
+}
+								</code>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer -->
+		<div class="footer copyright">
+			<ul>
+				<li>&copy; Untitled.</li>
+				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+
+	</body>
+
+</html>

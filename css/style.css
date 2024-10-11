@@ -1,0 +1,217 @@
+.page {
+    margin: 0;
+    width: 100%;
+}
+
+.wrapper {
+    position: relative;
+    padding: 4em 0 5em 0;
+}
+
+    .wrapper .title {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        text-align: center;
+        text-transform: uppercase;
+        display: block;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        font-size: 0.9em;
+        width: 25em;
+        height: 3.25em;
+        top: -3.25em;
+        line-height: 3.25em;
+        margin-bottom: -3.25em;
+        margin-left: -12.5em;
+        padding-top: 0.5em;
+    }
+
+    .wrapper .title:before {
+        content: '';
+        position: absolute;
+        bottom: -30px;
+        left: -35px;
+        width: 35px;
+        height: 38px;
+        background: url("../images/shadow.png");
+    }
+
+    .wrapper .title:after {
+        -moz-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        -ms-transform: scaleX(-1);
+        transform: scaleX(-1);
+        content: '';
+        position: absolute;
+        bottom: -30px;
+        right: -35px;
+        width: 35px;
+        height: 38px;
+        background: url("../images/shadow.png");
+    }
+
+    .wrapper.style1 {
+        background: #e97770;
+        color: #eee;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .wrapper.style1 .title {
+        background: #e97770;
+        color: #fff;
+    }
+
+    .wrapper.style1 h1,
+    .wrapper.style1 h2,
+    .wrapper.style1 h3,
+    .wrapper.style1 h4,
+    .wrapper.style1 h5,
+    .wrapper.style1 h6,
+    .wrapper.style1 strong,
+    .wrapper.style1 b,
+    .wrapper.style1 a {
+        color: #fff;
+    }
+
+    .wrapper.style2 {
+        background: #282b34;
+    }
+
+    .wrapper.style2 .title {
+        background: #282b34;
+        color: #fff;
+    }
+
+    .wrapper.style3 {
+        background: #f3f3f3;
+    }
+
+    .wrapper.style3 .title {
+        background: #f3f3f3;
+        color: #3b3f45;
+    }
+
+    .wrapper.style3 .image {
+        border: solid 10px #fff;
+    }
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .button.style1 {
+        background-color: #e97770;
+        color: #fff;
+    }
+
+    .button.style1:hover {
+        background-color: #d76560;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Тень при наведении */
+    }
+
+    .button.style1:active {
+        background-color: #c65551;
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2); /* Эффект нажатия */
+    }
+
+
+/* Стили для больших экранов 1200px */
+@media (max-width: 1200px) {
+    .wrapper {
+        padding: 3em 0 4em 0;
+    }
+
+    .wrapper .title {
+        font-size: 0.85em;
+        width: 22em;
+        margin-left: -11em;
+    }
+
+    .button {
+        padding: 10px 22px;
+        font-size: 13px;
+    }
+}
+
+/* Стили для экранов до 980px */
+@media (max-width: 980px) {
+    .wrapper {
+        padding: 3em 0 3em 0;
+    }
+
+    .wrapper .title {
+        font-size: 0.8em;
+        width: 20em;
+        margin-left: -10em;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}
+
+/* Стили для экранов до 760px */
+@media (max-width: 760px) {
+    .wrapper {
+        padding: 2.5em 0 3em 0;
+    }
+
+    .wrapper .title {
+        font-size: 0.75em;
+        width: 18em;
+        margin-left: -9em;
+    }
+
+    .button {
+        padding: 8px 18px;
+        font-size: 11px;
+    }
+
+    .assignment {
+        display: flex;
+        flex-direction: column; /* Меняем на вертикальный layout для маленьких экранов */
+        padding: 0 20px;
+    }
+}
+
+/* Стили для экранов до 560px */
+@media (max-width: 560px) {
+    .wrapper {
+        padding: 2em 0 2.5em 0;
+    }
+
+    .wrapper .title {
+        font-size: 0.7em;
+        width: 16em;
+        margin-left: -8em;
+    }
+
+    .button {
+        padding: 8px 16px;
+        font-size: 10px;
+    }
+
+    .wrapper .title, .assignment-to-work, .assignment-text {
+        text-align: center; /* Центрирование текста и уменьшение отступов */
+    }
+
+    .assignment {
+        display: flex;
+        flex-direction: column; /* Меняем на вертикальный layout для маленьких экранов */
+        padding: 0 20px;
+    }
+
+    .assignment-code {
+        margin-top: 20px; /* Добавляем отступ для разделения текста и кода */
+    }
+}
