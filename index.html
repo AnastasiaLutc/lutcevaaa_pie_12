@@ -8,11 +8,17 @@
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/contents.css">
 		<link rel="stylesheet" href="css/footer.css">
+		<link rel="stylesheet" href="css/menu.css">
 	</head>
 
 	<body class="page">
-		<!-- Scripts -->
-		<script src="js/lab2.js"></script>
+		<nav>
+			<ul>
+				<li><a href="#lab2">Лабораторная 2</a></li>
+				<li><a href="#lab3">Лабораторная 3</a></li>
+				<li><a href="#lab4">Лабораторная 4</a></li>
+			</ul>
+		</nav>
 
 		<!-- Header -->
 		<div class="header">
@@ -25,9 +31,8 @@
 			</div>
 
 		</div>
-
 		<!-- Лабораторная 2 -->
-		<div class="wrapper style3">
+		<div class="wrapper style3" id="lab2">
 			<div class="title">Лабораторная №2</div>
 			<div class="container">
 				<div class="assignment-to-work">
@@ -46,19 +51,19 @@
 					<div class="assignment-code">
 						<code>
 //Ввод радиусов
-let R1 = prompt("Введите R1. Учтите, что R1 > R2", )
-let R2 = prompt("Введите R2. Учтите, что R1 > R2", )
+let R1 = parseFloat(prompt("Введите R1. Учтите, что R1 > R2", ));
+let R2 = parseFloat(prompt("Введите R2. Учтите, что R1 > R2", ));
 
 //Проверка на нулевые или неправильно введенные данные
 if ((R1>R2)&&(R2>0)) {
 	//Вычисление площадей
-	let S1 = 3.14 * R1 * R1
-	let S2 = 3.14 * R2 * R2
-	let S3 = S1 - S2
-	let rezult = 'Площадь S1 = ' + S1 + '\n' + 'Площадь S2 = ' + S2 + '\n' + 'Площадь S3 = ' + S3
-	alert(rezult)
+	let S1 = 3.14 * R1 * R1;
+	let S2 = 3.14 * R2 * R2;
+	let S3 = S1 - S2;
+	let rezult = 'Площадь S1 = ' + S1 + '\n' + 'Площадь S2 = ' + S2 + '\n' + 'Площадь S3 = ' + S3;
+	alert(rezult);
 } else {
-	alert('Введите числа заново. R1 должен быть больше R2')
+	alert('Введите числа заново. R1 должен быть больше R2');
 }
 
 								</code>
@@ -75,15 +80,19 @@ if ((R1>R2)&&(R2>0)) {
 					<div class="assignment-code">
 						<code>
 //Ввод трехзначного числа
-let number = prompt("Введите трехзначное число", )
+let number = prompt("Введите трехзначное число", );
 
 //Проверка на трехзначное число
 if (number.length == 3) {
-	// Перестановка цифр
-	rezult = number[1] + number[2] + number[0]
-	alert('Число  ' + number + '  после перестановки ' + rezult)
+    //Перестановка цифр
+    rezult = number[1] + number[2] + number[0];
+    // Проверка на 0 в начале нового числа
+    if (rezult[0]==0){
+        rezult = number[2] + number[0];
+    }
+    alert('Число  ' + number + '  после перестановки ' + rezult);
 } else {
-	alert('Ошибка. Введите трехзначное число.')
+    alert('Ошибка. Введите трехзначное число.');
 }
 								</code>
 					</div>
@@ -97,6 +106,9 @@ if (number.length == 3) {
 				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 			</ul>
 		</div>
+		
+		<!-- Scripts -->
+		<script src="js/lab2.js"></script>
 
 	</body>
 

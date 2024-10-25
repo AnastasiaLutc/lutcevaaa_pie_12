@@ -1,6 +1,7 @@
 .page {
     margin: 0;
     width: 100%;
+    position: relative;
 }
 
 .wrapper {
@@ -38,9 +39,6 @@
     }
 
     .wrapper .title:after {
-        -moz-transform: scaleX(-1);
-        -webkit-transform: scaleX(-1);
-        -ms-transform: scaleX(-1);
         transform: scaleX(-1);
         content: '';
         position: absolute;
@@ -75,11 +73,11 @@
     }
 
     .wrapper.style2 {
-        background: #282b34;
+        background: #242A38;
     }
 
     .wrapper.style2 .title {
-        background: #282b34;
+        background: #242A38;
         color: #fff;
     }
 

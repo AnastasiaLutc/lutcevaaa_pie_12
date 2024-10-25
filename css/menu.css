@@ -1,0 +1,43 @@
+/* Общий стиль для меню */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #242A38;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Граница вокруг всего меню */
+    border-radius: 10px; 
+    padding: 10px 40px; 
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgba(255, 255, 255, 0.7); /* Светлый цвет текста */
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    font-size: 0.9em;
+    text-decoration: none;
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Анимация на наведение */
+    border-bottom: 1px solid transparent; /* Линия снизу для эффекта наведения */
+}
+
+nav ul li a:hover {
+    color: rgba(255, 255, 255, 1); /* Изменение цвета на белый при наведении */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8); /* Появление нижней границы */
+}
+
