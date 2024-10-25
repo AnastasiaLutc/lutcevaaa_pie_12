@@ -1,12 +1,12 @@
 .page {
     margin: 0;
     width: 100%;
-    position: relative;
 }
 
 .wrapper {
     position: relative;
     padding: 4em 0 5em 0;
+    scroll-margin: 100px;
 }
 
     .wrapper .title {
@@ -31,10 +31,10 @@
     .wrapper .title:before {
         content: '';
         position: absolute;
-        bottom: -30px;
+        bottom: -28px;
         left: -35px;
         width: 35px;
-        height: 38px;
+        height: 35px;
         background: url("../images/shadow.png");
     }
 
@@ -42,34 +42,20 @@
         transform: scaleX(-1);
         content: '';
         position: absolute;
-        bottom: -30px;
+        bottom: -28px;
         right: -35px;
         width: 35px;
-        height: 38px;
+        height: 35px;
         background: url("../images/shadow.png");
     }
 
     .wrapper.style1 {
-        background: #e97770;
-        color: #eee;
-        color: rgba(255, 255, 255, 0.75);
+        background: #f3f3f3;
     }
 
     .wrapper.style1 .title {
-        background: #e97770;
-        color: #fff;
-    }
-
-    .wrapper.style1 h1,
-    .wrapper.style1 h2,
-    .wrapper.style1 h3,
-    .wrapper.style1 h4,
-    .wrapper.style1 h5,
-    .wrapper.style1 h6,
-    .wrapper.style1 strong,
-    .wrapper.style1 b,
-    .wrapper.style1 a {
-        color: #fff;
+        background: #f3f3f3;
+        color: #3b3f45;
     }
 
     .wrapper.style2 {
@@ -81,19 +67,6 @@
         color: #fff;
     }
 
-    .wrapper.style3 {
-        background: #f3f3f3;
-    }
-
-    .wrapper.style3 .title {
-        background: #f3f3f3;
-        color: #3b3f45;
-    }
-
-    .wrapper.style3 .image {
-        border: solid 10px #fff;
-    }
-
 .button {
     display: inline-block;
     padding: 12px 24px;
@@ -101,27 +74,51 @@
     font-weight: bold;
     text-align: center;
     border-radius: 5px;
+    letter-spacing: 0.05em;
     border: none;
     cursor: pointer;
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-    .button.style1 {
+    .button {
         background-color: #e97770;
         color: #fff;
     }
 
-    .button.style1:hover {
+    .button:hover {
         background-color: #d76560;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Тень при наведении */
     }
 
-    .button.style1:active {
+    .button:active {
         background-color: #c65551;
         box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2); /* Эффект нажатия */
     }
 
+#myBtn {
+        display: none; 
+        position: fixed; 
+        transform: rotate(270deg);
+        bottom: 20px; 
+        right: 30px;
+        z-index: 99; /* Убедиться, что он не перекрывается */
+        background-color: #e97770; 
+        width: 70px;
+        height: 70px;
+        color: #242A38;
+        font-size: 2em;
+        font-weight: bold;
+        border-radius: 50%; /* Округленные углы */
+      }
+      
+    #myBtn:hover {
+        background-color: #d76560; 
+      }
 
+img {
+    margin: 0px 0px 10px;
+    width: 100%;
+}
 /* Стили для больших экранов 1200px */
 @media (max-width: 1200px) {
     .wrapper {

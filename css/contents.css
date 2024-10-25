@@ -9,16 +9,25 @@
 }
 
 .assignment-to-work strong {
-    color: #e97770;
     font-size: 1.4em;
     letter-spacing: 0.05em;
+    color:#e97770;
 }
 
 .assignment-to-work p {
-    color: #3b3f45;
     margin: 0 0 1em 0;
     font-size: 1.2em;
     letter-spacing: 0.05em;
+}
+
+.assignment-to-work.style1 p,
+.assignment-text.style1 p{
+    color:#3b3f45;
+}
+
+.assignment-to-work.style2 p,
+.assignment-text.style2 p{
+    color:#fff;
 }
 
 .container .hr-shelf {
@@ -44,17 +53,15 @@
 .assignment-text h2 {
     font-size: 1.5em;
     margin-bottom: 1em;
-    color: #e97770;
+    color:#e97770;
 }
 
 .assignment-text p {
     font-size: 1.2em;
-    color: #4a4f58;
     line-height: 1.5;
 }
 
 .assignment-code {
-    background-color: #292828;
     padding: 20px;
     border-radius: 10px;
     font-family: 'Courier New', monospace;
@@ -63,11 +70,41 @@
 
 .assignment-code code {
     display: block;
-    color: #fff;
     white-space: pre-wrap; /* Чтобы длинные строки кода переносились */
     line-height: 1.4;
 }
 
+.assignment-code.style1,
+.assignment-code.style1 code {
+    color: #fff;
+    background-color: #292828;
+}
+
+.assignment-code.style2,
+.assignment-code.style2 code {
+    color: #292828;
+    background-color: #f3f3f3;
+}
+
+.assignment-rezult {
+    color: #292828;
+    background-color: #f3f3f3;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0px;
+    width: 360px;
+    min-height: 20px;
+    height: fit-content;
+}
+
+input {
+    color: #292828;
+    background-color: #f3f3f3;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 20px 10px 0px;
+    height: 20px;
+}
 
 /* Стили для экранов до 1200px */
 @media (max-width: 1200px) {
