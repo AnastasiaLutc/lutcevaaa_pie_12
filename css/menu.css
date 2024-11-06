@@ -1,0 +1,104 @@
+/* Меню */
+.menu {
+    display: flex;
+    justify-content: center;
+    background-color: #242A38;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.menu__list {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    padding: 10px 40px;
+}
+
+.menu__item {
+    margin: 0 15px;
+}
+
+.menu__link {
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    font-size: 0.9em;
+    text-decoration: none;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.menu__link:hover {
+    color: rgba(255, 255, 255, 1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.menu__hamburger {
+    display: none; /* Не отображать кнопку по умолчанию */
+}
+
+@media screen and (max-width: 1200px) {
+    .menu__list {
+        justify-content: space-between;
+        padding: 15px 40px;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .menu__list {
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+
+    .menu__item {
+        margin: 0 10px;
+    }
+
+}
+
+@media screen and (max-width: 760px) {
+    .menu {
+        min-height: 34px;
+    }
+
+    .menu__list {
+        display: none;
+        flex-direction: column;
+    }
+    
+    .menu__link {
+        font-size: 0.8em;
+    }
+
+    .menu.menu_changing-display .menu__list {
+        border: none;
+        display: block;
+        text-align: left;
+    }
+
+    .menu__hamburger {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        display: block;
+        background: none;
+        border: none;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .menu {
+        min-height: 28px;
+    }
+}

@@ -3,6 +3,9 @@
     align-items: center;
     justify-content: center;
     position: relative;
+}
+
+.header__background {
     height: 24em;
     background: url("../images/banner.jpg") center center;
     background-size: cover;
@@ -11,14 +14,13 @@
     margin: 0;
 }
 
-.header-text {
+.header__content {
     width: 100%;
     text-align: center;
     position: relative;
-    top: 1.5em;
 }
 
-.header-text-h1 {
+.header__title {
     font-weight: 900;
     text-transform: uppercase;
     color: #fff;
@@ -27,7 +29,7 @@
     margin-top: 0;
 }
 
-.header-text-p {
+.header__subtitle {
     color: rgba(255, 255, 255, 0.69);
     text-transform: uppercase;
     margin: 1.25em 0 0 0;
@@ -36,7 +38,7 @@
     font-size: 0.9em;
 }
 
-.header-text-work {
+.header__author {
     color: rgba(255, 255, 255, 0.8);
     text-transform: uppercase;
     margin: 2.5em 0 1.5em 0;
@@ -45,62 +47,69 @@
     font-size: 1.1em;
 }
 
-/* Стили для разрешений до 1200px */
-@media (max-width: 1200px) {
-    .header {
-        height: 20em;
+@media screen and (max-width: 1200px) {
+    .header__background {
+        height: 22em;
     }
 
-    .header-text-h1 {
-        font-size: 1.8em;
+    .header__title {
+        font-size: 1.6em;
     }
 
-    .header-text-p, .header-text-work {
-        font-size: 0.85em;
-    }
-}
-
-/* Стили для разрешений до 980px */
-@media (max-width: 980px) {
-    .header {
-        height: 18em;
-    }
-
-    .header-text-h1 {
-        font-size: 1.7em;
-    }
-
-    .header-text-p, .header-text-work {
-        font-size: 0.8em;
-    }
-}
-
-/* Стили для разрешений до 760px */
-@media (max-width: 760px) {
-    .header {
-        height: 18em;
-    }
-
-    .header-text-h1 {
-        font-size: 1.4em;
-    }
-
-    .header-text-p, .header-text-work {
+    .header__subtitle,
+    .header__author {
         font-size: 0.75em;
     }
 }
 
-/* Стили для разрешений до 560px */
-@media (max-width: 560px) {
-    .header {
-        height: 16em;
+@media screen and (max-width: 900px) {
+    .header__background {
+        height: 21em;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .header__background {
+        height: 18em;
     }
 
-    .header-text-h1 {
-        font-size: 1.1em;
+    .header__title {
+        font-size: 1.3em;
     }
 
-    .header-text-p, .header-text-work {
-        font-size: 0.6em;
+    .header__subtitle,
+    .header__author {
+        font-size: 0.7em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header__background {
+        height: 18em;
+    }
+
+    .header__title {
+        font-size: 1.15em;
+    }
+
+    .header__subtitle,
+    .header__author {
+        font-size: 0.65em;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .header__background {
+        height: 15em;
+    }
+
+    .header__title {
+        font-size: 1em;
+    }
+
+    .header__subtitle,
+    .header__author {
+        font-size: 0.5em;
+        margin: 1em 0;
     }
 }
