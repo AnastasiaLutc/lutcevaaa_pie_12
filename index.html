@@ -1,238 +1,86 @@
 <!DOCTYPE HTML>
 <html lang="ru">
-	<head>
-		<title>ИСП лабораторные работы</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="css/header.css">
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="css/contents.css">
-		<link rel="stylesheet" href="css/footer.css">
-		<link rel="stylesheet" href="css/menu.css">
-	</head>
 
-	<body class="page">
-		<nav>
-			<ul>
-				<li><a href="#lab2">Лабораторная 2</a></li>
-				<li><a href="#lab3">Лабораторная 3</a></li>
-				<li><a href="#lab4">Лабораторная 4</a></li>
+<head>
+	<title>ИСП лабораторные работы</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/menu.css">
+	<link rel="stylesheet" href="css/contents.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+	<header class="header header__background">
+		<nav class="menu" id="display_nav">
+			<ul class="menu__list">
+				<li class="menu__item"><a class="menu__link" href="index.html">Главная</a></li>
+				<li class="menu__item"><a class="menu__link" href="pages/lab2.html">Лабораторная 2</a></li>
+				<li class="menu__item"><a class="menu__link" href="pages/lab3.html">Лабораторная 3</a></li>
+				<li class="menu__item"><a class="menu__link" href="pages/lab4.html">Лабораторная 4</a></li>
 			</ul>
+			<button class="menu__hamburger" onclick="changing_display()">☰</button>
 		</nav>
-		<!-- Header -->
-		<div class="header">
 
-			<div class="header-text">
-				<h1 class="header-text-h1">Лабораторные работы по ИСП</h1>
-				<p class="header-text-p">Сборник лабораторных работ по дисциплине "Инструментальные срества
-					программирования"</p>
-				<p class="header-text-work">Лютцева Анастасия гр. ПИЭ-12 вариант-13</p>
+		<div class="header__content">
+			<h1 class="header__title">Лабораторные работы по ИСП</h1>
+			<p class="header__subtitle">Сборник лабораторных работ по дисциплине "Инструментальные средства
+				программирования"</p>
+			<p class="header__author">Лютцева Анастасия гр. ПИЭ-12 вариант-13</p>
+		</div>
+	</header>
+
+	<div class="content content_background">
+		<div class="content__title content__title_background-color">Лабораторные работы</div>
+		<div class="container-tiles">
+			<!-- Лабораторная 2 -->
+			<div class="tile tile_sizes">
+				<a href="pages/lab2.html" class="tile__title"><strong>Лабораторная 2</strong></a>
+				<p class="tile__description tile__description_margin-top tile__description_text-bold">Линейный
+					вычислительный процесс</p>
+				<p class="tile__description tile__description_margin-bottom"><strong>Цели и задачи работы:</strong>
+					изучение функций ввода-вывода данных, программирование вычисления значения выражения.</p>
+				<a href="pages/lab2.html" class="tile__button tile__button_background-color">Перейти к лабораторной</a>
 			</div>
 
-		</div>
-		<!-- Лабораторная 2 -->
-		<div class="wrapper style1" id="lab2">
-			<div class="title">Лабораторная №2</div>
-			<div class="container">
-				<div class="assignment-to-work style1">
-					<p><strong>Задание к работе:</strong> реализовать линейный вычислительный процесс. Самостоятельно решить
-						задачу в соответствии с индивидуальным вариантом.</p>
-				</div>
-				<hr class="hr-shelf">
-				<div class="assignment">
-					<div class="assignment-text style1">
-						<h2><strong>Задание 1</strong></h2>
-						<p>Даны два круга с общим центром и радиусами R1 и R2 (R1 > R2). Найти площади этих кругов S1 и S2,
-							а также площадь S3 кольца, внешний радиус которого равен R1, а внутренний радиус равен R2: S1 =
-							π·(R1)^2, S2 = π·(R2)^2, S3 = S1−S2. В качестве значения π использовать 3.14.</p>
-						<button class="button" onclick="area_of_circle()">Решить задание</button>
-					</div>
-					<div class="assignment-code style1">
-						<code>
-//Ввод радиусов
-let R1 = parseFloat(prompt("Введите R1. Учтите, что R1 > R2", ));
-let R2 = parseFloat(prompt("Введите R2. Учтите, что R1 > R2", ));
+			<!-- Лабораторная 3 -->
+			<div class="tile tile_sizes">
+				<a href="pages/lab3.html" class="tile__title"><strong>Лабораторная 3</strong></a>
+				<p class="tile__description tile__description_margin-top tile__description_text-bold">Ветвления</p>
+				<p class="tile__description tile__description_margin-bottom"><strong>Цели и задачи работы:</strong>
+					изучение разветвляющихся алгоритмов, операторов выбора, программирование разветвляющегося
+					вычислительного процесса.</p>
+				<a href="pages/lab3.html" class="tile__button tile__button_background-color">Перейти к лабораторной</a>
+			</div>
 
-//Проверка на нулевые или неправильно введенные данные
-if ((R1>R2)&&(R2>0)) {
-	//Вычисление площадей
-	let S1 = 3.14 * R1 * R1;
-	let S2 = 3.14 * R2 * R2;
-	let S3 = S1 - S2;
-	let rezult = 'Площадь S1 = ' + S1 + '\n' + 'Площадь S2 = ' + S2 + '\n' + 'Площадь S3 = ' + S3;
-	alert(rezult);
-} else {
-	alert('Введите числа заново. R1 должен быть больше R2');
-}
-
-								</code>
-					</div>
-				</div>
-				<hr class="hr-shelf">
-				<div class="assignment">
-					<div class="assignment-text style1">
-						<h2><strong>Задание 2</strong></h2>
-						<p>Дано трехзначное число. В нем зачеркнули первую слева цифру и приписали ее справа. Вывести
-							полученное число.</p>
-						<button class="button" onclick="transposition()">Решить задание</button>
-					</div>
-					<div class="assignment-code style1">
-						<code>
-//Ввод трехзначного числа
-let number = prompt("Введите трехзначное число", );
-
-//Проверка на трехзначное число
-if (number.length == 3) {
-    //Перестановка цифр
-    rezult = number[1] + number[2] + number[0];
-    // Проверка на 0 в начале нового числа
-    if (rezult[0]==0){
-        rezult = number[2] + number[0];
-    }
-    alert('Число  ' + number + '  после перестановки ' + rezult);
-} else {
-    alert('Ошибка. Введите трехзначное число.');
-}
-								</code>
-					</div>
-				</div>
+			<!-- Лабораторная 4 -->
+			<div class="tile tile_sizes">
+				<a href="pages/lab4.html" class="tile__title"><strong>Лабораторная 4</strong></a>
+				<p class="tile__description tile__description_margin-top tile__description_text-bold">Циклы</p>
+				<p class="tile__description tile__description_margin-bottom"><strong>Цели и задачи работы:</strong>
+					изучение циклических алгоритмов, операторов цикла, программирование циклического вычислительного
+					процесса.</p>
+				<a href="pages/lab4.html" class="tile__button tile__button_background-color">Перейти к лабораторной</a>
 			</div>
 		</div>
-		<!-- Лабораторная 3 -->
-		<div class="wrapper style2" id="lab3">
-			<div class="title">Лабораторная №3</div>
-			<div class="container">
-				<div class="assignment-to-work style2">
-					<p><strong>Задание к работе:</strong> Реализовать разветвляющийся вычислительный процесс. Самостоятельно решить задачи в соответствии с индивидуальным вариантом.</p>
-				</div>
-				<hr class="hr-shelf">
-				<div class="assignment">
-					<div class="assignment-text style2">
-						<h2><strong>Задание 1</strong></h2>
-						<p>Даны три целых числа: A, B, C. Проверить истинность высказывания: «Хотя бы одно из чисел A, B, C положительное».</p>
-						<p>Введите три числа через пробел.</p>
-						<input type="text" id="positive_numbers" placeholder="Введите целые числа">
-						<button class="button" onclick="positive_numbers()">Решить задание</button>
-						<div class="assignment-rezult"  id="positive_numbers_rezult"></div>
-					</div>
-					<div class="assignment-code style2">
-						<code>
-// Получение элементов
-var numbers = document.getElementById("positive_numbers");
-var rezult = document.getElementById("positive_numbers_rezult");
-let is_number = /^\d+(\.\d+)?$/;
+	</div>
 
-// Проверка на целые числа
-if (numbers.value.indexOf('.') == -1 && numbers.value.indexOf(',') == -1) {
-	array_numbers = numbers.value.split(' ');
-	// Проверка на ввод 3-х чисел
-	if (array_numbers.length !== 3) {
-		return rezult.innerHTML = "Введите ровно три числа";
-	}
-	for (let i = 0; i < array_numbers.length; i++) {
-		if (!is_number.test(array_numbers[i])) return rezult.innerHTML = "Нельзя вводить буквы";
-	}
-} else {
-	rezult.innerHTML = "Введите целые числа";
-}
-
-// Преобразование строк в целые числа
-int_numbers = array_numbers.map(x => parseInt(x));
-// Вывод ответа
-rezult.innerHTML = int_numbers.some(n => n > 0) ? 'Хотя бы одно из чисел положительное': 'Все числа отрицательные';
-							</code>
-					</div>
-				</div>
-				<hr class="hr-shelf">
-				<div class="assignment">
-					<div class="assignment-text style2">
-						<h2><strong>Задание 2</strong></h2>
-						<p>Даны три числа. Найти среднее из них (то есть число, расположенное между наименьшим и наибольшим).</p>
-						<input type="text" id="avg_numbers" placeholder="Введите числа">
-						<button class="button" onclick="avg_numbers()">Решить задание</button>
-						<div class="assignment-rezult"  id="avg_numbers_rezult"></div>
-					</div>
-					<div class="assignment-code style2">
-						<code>
-// Получение элементов
-var numbers = document.getElementById("avg_numbers");
-var rezult = document.getElementById("avg_numbers_rezult");
-let is_number = /^\d+(\.\d+)?$/;
-						
-if (numbers.value.indexOf(',') == -1) {
-	array_numbers = numbers.value.split(' ');
-	if (array_numbers.length !== 3) {
-		return rezult.innerHTML = "Введите ровно три числа";
-	}
-	for (let i = 0; i < array_numbers.length; i++) {
-		if (!is_number.test(array_numbers[i])) return rezult.innerHTML = "Нельзя вводить буквы";
-	}
-} else {
-	rezult.innerHTML = "Введите числа правильно (дробные через точку) ";
-}
-						
-float_numbers = array_numbers.map(x => parseFloat(x));
-let sum = 0; 
-for (let i = 0; i < float_numbers.length; i++) { 
-	sum += float_numbers[i]; // На каждой итерации прибавляем к сумме значение текущего элемента массива
-}
-rezult.innerHTML = sum / float_numbers.length; // Вывод среднего арифметического
-						</code>
-					</div>
-				</div>
-				<hr class="hr-shelf">
-				<div class="assignment">
-					<div class="assignment-text style2">
-						<h2><strong>Задание 3</strong></h2>
-						<p>Вычислить значение функции y = f(x) при произвольных значениях x.</p>
-						<img src="images/equation.jpg" alt="Система уравнений">
-						<input type="text" id="x_for_equation_system" placeholder="Введите число">
-						<button class="button" onclick="equation_system()">Решить задание</button>
-						<div class="assignment-rezult"  id="equation_system_rezult"></div>
-					</div>
-					<div class="assignment-code style2">
-						<code>
-// Получение элементов
-var input_x = document.getElementById("x_for_equation_system");
-var rezult = document.getElementById("equation_system_rezult");
-let is_number = /^\d+(\.\d+)?$/;
-let equation_a = 4.8;
-let equation_b = 0.51;
-// Проверка на правильное введение числа
-if (input_x.value.indexOf(',') != -1 || !is_number.test(input_x.value)) {
-	return rezult.innerHTML = "Введите число правильно (дробное через точку) ";
-} 
-//Преобрахование в дробное число
-float_x = parseFloat(input_x.value);
-//Решение системы уравнений
-if (float_x <= -2) {
-	y = Math.log(Math.abs(float_x) + Math.sqrt(equation_a * float_x * float_x + 1));
-} else if (float_x > 5) {
-	y = Math.atan(equation_b / (float_x * float_x + 1));
-} else {
-	y = Math.sqrt(equation_a * equation_a + float_x * float_x);
-}
-//Вывод результата
-rezult.innerHTML = y;
-						</code>
-					</div>
-				</div>
-			</div>
-		</div>
-		<button onclick="topFunction()" id="myBtn" title="Перейти к началу">⨠</button>
-		<!-- Footer -->
-		<div class="footer copyright">
-			<ul>
-				<li>&copy; LutcevaA</li>
-				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+	<footer class="footer">
+		<div class="footer__content">
+			<ul class="footer__list">
+				<li class="footer__item">Исходный код: <a class="footer__link"
+						href="https://github.com/AnastasiaLutc/lutcevaaa_pie_12">GitHub</a></li>
+				<li class="footer__item">Задания взяты с сайта <a class="footer__link"
+						href="https://interkot.ru/lessons/basic_programm_1/">interkot.ru</a></li>
 			</ul>
 		</div>
-		
-		<!-- Scripts -->
-		<script src="js/lab2.js"></script>
-		<script src="js/lab3.js"></script>
-		<script src="js/scroll_page.js"></script>
+	</footer>
 
-	</body>
+	<script src="js/menu_display.js"></script>
+</body>
 
 </html>

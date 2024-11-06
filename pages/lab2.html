@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+
+<head>
+	<title>ИСП лабораторные работы</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/test.css">
+	<link rel="stylesheet" href="../css/header.css">
+	<link rel="stylesheet" href="../css/menu.css">
+	<link rel="stylesheet" href="../css/contents.css">
+	<link rel="stylesheet" href="../css/footer.css">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+	<header class="header header__background">
+		<nav class="menu" id="display_nav">
+			<ul class="menu__list">
+				<li class="menu__item"><a class="menu__link" href="../index.html">Главная</a></li>
+				<li class="menu__item"><a class="menu__link" href="../pages/lab2.html">Лабораторная 2</a></li>
+				<li class="menu__item"><a class="menu__link" href="../pages/lab3.html">Лабораторная 3</a></li>
+				<li class="menu__item"><a class="menu__link" href="../pages/lab4.html">Лабораторная 4</a></li>
+			</ul>
+			<button class="menu__hamburger" onclick="changing_display()">☰</button>
+		</nav>
+
+		<div class="header__content">
+			<h1 class="header__title">Лабораторные работы по ИСП</h1>
+			<p class="header__subtitle">Сборник лабораторных работ по дисциплине "Инструментальные средства
+				программирования"</p>
+			<p class="header__author">Лютцева Анастасия гр. ПИЭ-12 вариант-13</p>
+		</div>
+	</header>
+
+	<div class="content content_background">
+		<div class="content__title content__title_background-color">Лабораторная №2</div>
+		<div class="content__container-lab">
+			<div class="content__assignment-to-work">
+				<p><strong>Задание к работе:</strong> реализовать линейный вычислительный процесс. Самостоятельно решить
+					задачу в соответствии с индивидуальным вариантом.</p>
+			</div>
+			<hr class="content__hr-shelf">
+			<div class="content__assignment">
+				<div class="content__assignment-text">
+					<h2><strong>Задание 1</strong></h2>
+					<p>Даны два круга с общим центром и радиусами R1 и R2 (R1 > R2). Найти площади этих кругов S1 и S2,
+						а также площадь S3 кольца, внешний радиус которого равен R1, а внутренний радиус равен R2: S1 =
+						π·(R1)^2, S2 = π·(R2)^2, S3 = S1−S2. В качестве значения π использовать 3.14.</p>
+					<button class="content__button content__button_background-color" onclick="area_of_circle()">Решить
+						задание</button>
+				</div>
+				<div class="content__assignment-code">
+					<code>
+//Ввод радиусов
+let R1 = parseFloat(prompt("Введите R1. Учтите, что R1 > R2", ));
+let R2 = parseFloat(prompt("Введите R2. Учтите, что R1 > R2", ));
+	
+//Проверка на нулевые или неправильно введенные данные
+if ((R1>R2)&&(R2>0)) {
+	//Вычисление площадей
+	let S1 = 3.14 * R1 * R1;
+	let S2 = 3.14 * R2 * R2;
+	let S3 = S1 - S2;
+	let rezult = 'Площадь S1 = ' + S1 + '\n' + 'Площадь S2 = ' + S2 + '\n' + 'Площадь S3 = ' + S3;
+	alert(rezult);
+} else {
+	alert('Введите числа заново. R1 должен быть больше R2');
+}
+	
+					</code>
+				</div>
+			</div>
+			<hr class="content__hr-shelf">
+			<div class="content__assignment">
+				<div class="content__assignment-text">
+					<h2><strong>Задание 2</strong></h2>
+					<p>Дано трехзначное число. В нем зачеркнули первую слева цифру и приписали ее справа. Вывести
+						полученное число.</p>
+					<button class="content__button content__button_background-color" onclick="transposition()">Решить
+						задание</button>
+				</div>
+				<div class="content__assignment-code">
+					<code>
+//Ввод трехзначного числа
+let number = prompt("Введите трехзначное число", );
+	
+//Проверка на трехзначное число
+if (number.length == 3) {
+	//Перестановка цифр
+	rezult = number[1] + number[2] + number[0];
+	// Проверка на 0 в начале нового числа
+	if (rezult[0]==0){
+		rezult = number[2] + number[0];
+	}
+	alert('Число  ' + number + '  после перестановки ' + rezult);
+} else {
+	alert('Ошибка. Введите трехзначное число.');
+}
+					</code>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<div class="footer__content">
+			<ul class="footer__list">
+				<li class="footer__item">Исходный код: <a class="footer__link"
+						href="https://github.com/AnastasiaLutc/lutcevaaa_pie_12">GitHub</a></li>
+				<li class="footer__item">Задания взяты с сайта <a class="footer__link"
+						href="https://interkot.ru/lessons/basic_programm_1/">interkot.ru</a></li>
+			</ul>
+		</div>
+	</footer>
+
+	<script src="../js/menu_display.js"></script>
+	<script src="../js/lab2.js"></script>
+</body>
+
+</html>

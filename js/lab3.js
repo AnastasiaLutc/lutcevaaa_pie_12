@@ -1,69 +1,79 @@
 function positive_numbers() {
-    var numbers = document.getElementById("positive_numbers");
+    var a_number = document.getElementById("a_number").value;
+    var b_number = document.getElementById("b_number").value;
+    var c_number = document.getElementById("c_number").value;
     var rezult = document.getElementById("positive_numbers_rezult");
-    let is_number = /(\-?\d+)(\.\d+)?$/;
 
-    if (numbers.value.indexOf('.') == -1 && numbers.value.indexOf(',') == -1) {
-        array_numbers = numbers.value.split(' ');
-        if (array_numbers.length !== 3) {
-            rezult.innerHTML = "Введите ровно три числа";
-        }
-        for (let i = 0; i < array_numbers.length; i++) {
-            if (!is_number.test(array_numbers[i])) return rezult.innerHTML = "Нельзя вводить буквы";
+    if (a_number === '' || b_number === '' || c_number === '') {
+        return rezult.innerHTML = "В одном из полей пусто";
+    } else {
+        a_number = Number(a_number);
+        b_number = Number(b_number);
+        c_number = Number(c_number);
+    }
+
+    if (!isNaN(a_number + b_number + c_number) && Number.isInteger(a_number) && Number.isInteger(b_number) && Number.isInteger(c_number)) {
+        if (a_number < 0 && b_number < 0 && c_number < 0) {
+            rezult.innerHTML = 'Все числа отрицательные';
+        } else {
+            rezult.innerHTML = 'Хотя бы одно из чисел положительное';
         }
     } else {
         rezult.innerHTML = "Введите целые числа";
     }
-
-    let int_numbers = array_numbers.map(x => parseInt(x));
-    rezult.innerHTML = int_numbers.some(n => n > 0) ? 'Хотя бы одно из чисел положительное': 'Все числа отрицательные';
 }
 
 function avg_numbers(){
-    var numbers = document.getElementById("avg_numbers");
+    var a = document.getElementById("a_number_avg").value;
+    var b = document.getElementById("b_number_avg").value;
+    var c = document.getElementById("c_number_avg").value;
     var rezult = document.getElementById("avg_numbers_rezult");
-    let is_number = /(\-?\d+)([.,](\d+))?/;
 
-    if (numbers.value.indexOf(',') == -1) {
-        array_numbers = numbers.value.split(' ');
-        if (array_numbers.length !== 3 ) {
-            rezult.innerHTML = "Введите ровно три числа";
-        }
-        for (let i = 0; i < array_numbers.length; i++) {
-            if (!is_number.test(array_numbers[i])) return rezult.innerHTML = "Нельзя вводить буквы";
-        }
+    if (a === '' || b === '' || c=== '') {
+        return rezult.innerHTML = "В одном из полей пусто";
     } else {
-        return rezult.innerHTML = "Введите числа правильно (дробные через точку)";
+        a = Number(a);
+        b = Number(b);
+        c = Number(c);
     }
 
-    float_numbers = array_numbers.map(x => parseFloat(x));
-    let sum = 0; 
-    for (let i = 0; i < float_numbers.length; i++) { 
-        sum += float_numbers[i];
+    if (!isNaN(a + b + c)) {
+        if (((b<=a) && (a<=c))||((b>=a) && (a>=c))){
+            rezult.innerHTML = "Среднее из чисел " + a;
+        } else if (((a<=b) && (b<=c))||((a>=b) && (b>=c))) {
+            rezult.innerHTML = "Среднее из чисел " + b;
+        } else {
+            rezult.innerHTML = "Среднее из чисел " + c;
+        }      
+    } else {
+        rezult.innerHTML = "Введите числа правильно (дробные через точку) ";
     }
-    rezult.innerHTML = sum / float_numbers.length; 
 }
 
 function equation_system() {
-    var input_x = document.getElementById("x_for_equation_system");
+    var x = document.getElementById("x_for_equation_system").value;
     var rezult = document.getElementById("equation_system_rezult");
-    let is_number = /^\d+(\.\d+)?$/;
-    let equation_a = 4.8;
-    let equation_b = 0.51;
+    let a = 4.8;
+    let b = 0.51;
 
-    if (input_x.value.indexOf(',') != -1 || !is_number.test(input_x.value)) {
-        return rezult.innerHTML = "Введите число правильно (дробное через точку) ";
-    } 
-
-    float_x = parseFloat(input_x.value);
-
-    if (float_x <= -2) {
-        y = Math.log(Math.abs(float_x) + Math.sqrt(equation_a * float_x * float_x + 1));
-    } else if (float_x > 5) {
-        y = Math.atan(equation_b / (float_x * float_x + 1));
+    if (x === '') {
+        return rezult.innerHTML = "В поле пусто";
     } else {
-        y = Math.sqrt(equation_a * equation_a + float_x * float_x);
+        x = Number(x);
+    }   
+
+    if (!isNaN(x)) {
+        if (x <= -2) {
+            y = Math.log(Math.abs(x) + Math.sqrt(a * x * x + 1));
+        } else if (x > 5) {
+            y = Math.atan(b / (x * x + 1));
+        } else {
+            y = Math.sqrt(a * a + x * x);
+        }
+        rezult.innerHTML = y;
+        
+    } else {
+        rezult.innerHTML = "Введите число правильно (дробное через точку) ";
     }
 
-    rezult.innerHTML = y;
 }
