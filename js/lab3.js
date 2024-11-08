@@ -12,7 +12,7 @@ function positive_numbers() {
         c_number = Number(c_number);
     }
 
-    if (!isNaN(a_number + b_number + c_number) && Number.isInteger(a_number) && Number.isInteger(b_number) && Number.isInteger(c_number)) {
+    if (!isNaN(a_number + b_number + c_number) && (a_number % 1 === 0) && (b_number % 1 === 0) && (c_number % 1 === 0)) {
         if (a_number < 0 && b_number < 0 && c_number < 0) {
             rezult.innerHTML = 'Все числа отрицательные';
         } else {

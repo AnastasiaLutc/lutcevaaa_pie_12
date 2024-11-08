@@ -70,7 +70,7 @@ if (a_number === '' || b_number === '' || c_number === '') {
     c_number = Number(c_number);
 }
 
-if (!isNaN(a_number + b_number + c_number) && Number.isInteger(a_number) && Number.isInteger(b_number) && Number.isInteger(c_number)) {
+if (!isNaN(a_number + b_number + c_number) && (a_number % 1 === 0) && (b_number % 1 === 0) && (c_number % 1 === 0)) {
     if (a_number < 0 && b_number < 0 && c_number < 0) {
         rezult.innerHTML = 'Все числа отрицательные';
     } else {
@@ -130,7 +130,7 @@ if (!isNaN(a + b + c)) {
 				<div class="content__assignment-text">
 					<h2><strong>Задание 3</strong></h2>
 					<p>Вычислить значение функции y = f(x) при произвольных значениях x.</p>
-					<img src="../images/equation.jpg" alt="Система уравнений" class="content__assignment-text-img">
+					<img src="../images/equation.jpg" alt="Система уравнений" class="image-used-in-lab image-used-in-lab_width-100 image-used-in-lab_margin-bottom">
 					<input id="x_for_equation_system" placeholder="Введите число">
 					<button class="content__button content__button_background-color" onclick="equation_system()">Решить
 						задание</button>
