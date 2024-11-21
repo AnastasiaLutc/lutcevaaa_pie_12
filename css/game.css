@@ -1,0 +1,12 @@
+.game {
+    /* display: flex;
+    flex-direction: column; */
+    padding: 24px;
+}
+.game_background {
+    background: #f3f3f3;
+}
+.story-text {
+    min-height: 170px;
+    font-size: 18px;
+}

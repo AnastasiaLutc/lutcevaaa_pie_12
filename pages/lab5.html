@@ -13,34 +13,56 @@
 	<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <header class="header header__background">
+    <header class="header header__game-background ">
 		<nav class="menu" id="display_nav">
 			<ul class="menu__list">
-				<li class="menu__item"><a class="menu__link" href="index.html">Главная</a></li>
-				<li class="menu__item"><a class="menu__link" href="pages/lab2.html">Лабораторная 2</a></li>
-				<li class="menu__item"><a class="menu__link" href="pages/lab3.html">Лабораторная 3</a></li>
-				<li class="menu__item"><a class="menu__link" href="pages/lab4.html">Лабораторная 4</a></li>
-                <li class="menu__item"><a class="menu__link" href="pages/lab4.html">Лабораторная 5</a></li>
+				<li class="menu__item"><a class="menu__link" href="../index.html">Главная</a></li>
+				<li class="menu__item"><a class="menu__link" href="../pages/lab2.html">Лабораторная 2</a></li>
+				<li class="menu__item"><a class="menu__link" href="../pages/lab3.html">Лабораторная 3</a></li>
+				<li class="menu__item"><a class="menu__link" href="../pages/lab4.html">Лабораторная 4</a></li>
+                <li class="menu__item"><a class="menu__link" href="../pages/lab5.html">Лабораторная 5</a></li>
 			</ul>
 			<button class="menu__hamburger" onclick="changing_display()">☰</button>
 		</nav>
 
-		<div class="header__content">
-			<!-- <h1 class="header__title">Лабораторные работы по ИСП</h1> -->
-			<p class="header__subtitle"><strong>Визуальная новелла</strong>
-                по книге "Благие знамения" Т.Пратчетта и Н.Геймана.</p>
-		</div>
+		<p class="header__game-title">Визуальная новелла по книге <strong>"Благие знамения"</strong> Т.Пратчетта и Н.Геймана.</p>
 	</header>
 
-    <div>
+    <div class="game game_background">
         <div id="text-box">
-            <p id="story-text">Добро пожаловать в мир «Благих знамений». Нажмите, чтобы начать историю...</p>
+            <p id="story-text">Мир на пороге Армагедона, но в маленькой деревушке Тадфилд жизнь идёт своим чередом. Здесь живёт Адам Янг, на первый взгляд обычный 11-летний мальчик, который является Антихристом, хотя сам он об этом пока не догадывается. Адам и его друзья — Пеппер, Брайан и Уэнслидейл — называют себя Эти. Они беззаботно проводят летние каникулы, устраивая приключения, не подозревая, что на Адама возложена судьба всего мира.</p>
         </div>
         <div id="choices">
-            <button class="choice-btn" onclick="makeChoice(1)">Выбор 1</button>
-            <button class="choice-btn" onclick="makeChoice(2)">Выбор 2</button>
-            <button class="choice-btn" onclick="makeChoice(3)">Выбор 3</button>
+            <button class="choice-btn" id="choise1" onclick="getButton(0)">Выбор 1</button>
+            <button class="choice-btn" id="choise2" onclick="getButton(2)">Выбор 2</button>
+            <button class="choice-btn" id="choise3" onclick="getButton(4)">Выбор 3</button>
         </div>
+        <!-- <div class="img">
+            <img id="img-main" src="../src/img/img_0.jpg" />
+        </div>
+        
+        <div class="buttons">
+            <div class="buttons-button button1">
+              <button
+                type="button"
+                class="button"
+                id="answer1"
+                onclick="getButton(event)"
+              >
+                Начать путешествие
+              </button>
+            </div>
+            <div class="buttons-button button2">
+              <button
+                type="button"
+                class="button"
+                id="answer2"
+                onclick="getButton(event)"
+              >
+                Answer 2
+              </button>
+            </div>
+        </div> -->
     </div>
 
     <footer class="footer">
@@ -53,6 +75,6 @@
 		</div>
 	</footer>
 
-    <!-- <script src="../js/game.js"></script> -->
+    <script src="../js/game.js"></script>
 </body>
 </html>
