@@ -47,19 +47,6 @@
     font-size: 1.1em;
 }
 
-.header__game-background {
-    height: 7em;
-    background-color: #292828;
-    align-items: flex-end;
-}
-.header__game-title {
-    color: rgba(255, 255, 255, 0.69);
-    margin-top: 20px;
-    text-align: center;
-    letter-spacing: 0.1em;
-    font-size: 1em;
-}
-
 @media screen and (max-width: 1200px) {
     .header__background {
         height: 22em;

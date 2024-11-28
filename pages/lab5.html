@@ -5,7 +5,7 @@
     <title>Благие Знамения: Судьба Адама</title>
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../css/game.css">
     <link rel="stylesheet" href="../css/header.css">
 	<link rel="stylesheet" href="../css/menu.css">
@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <header class="header header__game-background ">
+    <header class="header header__game-background">
 		<nav class="menu" id="display_nav">
 			<ul class="menu__list">
 				<li class="menu__item"><a class="menu__link" href="../index.html">Главная</a></li>
@@ -29,40 +29,15 @@
 	</header>
 
     <div class="game game_background">
+        <img src="../images/game/" alt="Добро пожаловать в Англию">
         <div id="text-box">
-            <p id="story-text">Мир на пороге Армагедона, но в маленькой деревушке Тадфилд жизнь идёт своим чередом. Здесь живёт Адам Янг, на первый взгляд обычный 11-летний мальчик, который является Антихристом, хотя сам он об этом пока не догадывается. Адам и его друзья — Пеппер, Брайан и Уэнслидейл — называют себя Эти. Они беззаботно проводят летние каникулы, устраивая приключения, не подозревая, что на Адама возложена судьба всего мира.</p>
+            <p class="game__story-text" id="story-text">Добро пожаловать в Англию! Через два дня наступит Армагедон. Надеюсь, ты успеешь посетить все достопримечательности.</p>
         </div>
         <div id="choices">
-            <button class="choice-btn" id="choise1" onclick="getButton(0)">Выбор 1</button>
-            <button class="choice-btn" id="choise2" onclick="getButton(2)">Выбор 2</button>
-            <button class="choice-btn" id="choise3" onclick="getButton(4)">Выбор 3</button>
+            <button class="game__button" id="choise1" onclick="getButton(0)">Начать историю</button>
+            <button class="game__button game__button_display-none" id="choise2" onclick="getButton(2)">Выбор 2</button>
+            <button class="game__button game__button_display-none" id="choise3" onclick="getButton(4)">Выбор 3</button>
         </div>
-        <!-- <div class="img">
-            <img id="img-main" src="../src/img/img_0.jpg" />
-        </div>
-        
-        <div class="buttons">
-            <div class="buttons-button button1">
-              <button
-                type="button"
-                class="button"
-                id="answer1"
-                onclick="getButton(event)"
-              >
-                Начать путешествие
-              </button>
-            </div>
-            <div class="buttons-button button2">
-              <button
-                type="button"
-                class="button"
-                id="answer2"
-                onclick="getButton(event)"
-              >
-                Answer 2
-              </button>
-            </div>
-        </div> -->
     </div>
 
     <footer class="footer">
