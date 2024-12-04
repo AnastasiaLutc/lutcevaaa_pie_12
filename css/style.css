@@ -3,3 +3,18 @@ body {
     width: 100%;
     margin: 0;
 }
+
+.image-used-in-lab {
+    position: relative;
+    
+}
+.image-used-in-lab_width-100 {
+    width: 100%;
+}
+.image-used-in-lab_margin-bottom {
+    margin-bottom: 10px;
+}
+.image-used-in-lab_width-auto {
+    width: auto;
+}
+

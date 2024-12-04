@@ -22,6 +22,9 @@
 				<li class="menu__item"><a class="menu__link" href="../pages/lab2.html">Лабораторная 2</a></li>
 				<li class="menu__item"><a class="menu__link" href="../pages/lab3.html">Лабораторная 3</a></li>
 				<li class="menu__item"><a class="menu__link" href="../pages/lab4.html">Лабораторная 4</a></li>
+                <li class="menu__item"><a class="menu__link" href="../pages/lab5.html">Лабораторная 5</a></li>
+				<li class="menu__item"><a class="menu__link" href="../pages/lab6.html">Лабораторная 6</a></li>
+				<li class="menu__item"><a class="menu__link" href="../pages/lab7.html">Лабораторная 7</a></li>
 			</ul>
 			<button class="menu__hamburger" onclick="changing_display()">☰</button>
 		</nav>
@@ -38,24 +41,44 @@
 		<div class="content__title content__title_background-color">Лабораторная №4</div>
 		<div class="content__container-lab">
 			<div class="content__assignment-to-work">
-				<!-- <p><strong>Задание к работе:</strong> Реализовать разветвляющийся вычислительный процесс. Самостоятельно решить задачи в соответствии с индивидуальным вариантом.</p> -->
-				<p><strong>Страница в разработке</strong></p>
+				<p><strong>Задание к работе:</strong> Реализовать  циклический вычислительный  процесс.  Самостоятельно решить задачи в соответствии с индивидуальным вариантом.</p>
 			</div>
-			<!-- <hr class="content__hr-shelf">
+			<hr class="content__hr-shelf">
 			<div class="content__assignment">
 				<div class="content__assignment-text">
 					<h2><strong>Задание 1</strong></h2>
-					<p>Даны три целых числа: A, B, C. Проверить истинность высказывания: «Хотя бы одно из чисел A, B, C положительное».</p>
-					<p>Введите три числа.</p>
-                    <input id="a_number" placeholder="Введите целое число">
-					<input id="b_number" placeholder="Введите целое число">
-					<input id="c_number" placeholder="Введите целое число">
-					<button class="content__button content__button_background-color" onclick="positive_numbers()">Решить задание</button>
-                    <div class="content__assignment-rezult"  id="positive_numbers_rezult"></div>
+					<p>Дано  целое  число  K  и  набор  ненулевых  целых  чисел;  признак  его завершения — число 0. Вывести количество чисел в наборе, меньших K.</p>
+					<p>Введите целое число.</p>
+					<p>Набор ненулевых  целых  чисел введите в диалоговом окне.</p>
+                    <input id="int_K_number" placeholder="Введите целое число">
+					<button class="content__button content__button_background-color" onclick="count_numbers_in_set()">Решить задание</button>
+                    <div class="content__assignment-rezult"  id="count_numbers_rezult"></div>
 				</div>
 				<div class="content__assignment-code">
 					<code>
+var k_number = document.getElementById("int_K_number").value;
+var rezult = document.getElementById("count_numbers_rezult");
+let k = Number(k_number);
 
+if (k_number === '' || isNaN(k) || !(k % 1 === 0)) {
+    return rezult.innerHTML = "Число не введено или не целое";
+} 
+
+let count = 0;
+let number;
+let data_set = '';
+
+while (true) {
+    number = parseInt(prompt("Введите целое число (для завершения введите 0):"));
+    data_set = data_set.concat(number, " ");
+    if (number === 0) {
+        break;
+    } else if (number < k) {
+        count++;
+    }
+}
+
+return rezult.innerHTML = "В наборе данных [" + data_set + "].  " + count + " чисел меньше " + k;
 					</code>
 				</div>
 			</div>
@@ -63,36 +86,33 @@
 			<div class="content__assignment">
 				<div class="content__assignment-text">
 					<h2><strong>Задание 2</strong></h2>
-					<p>Даны три числа. Найти среднее из них (то есть число, расположенное между наименьшим и наибольшим).</p>
-					<p>Введите три числа.</p>
-                    <input id="a_number_avg" placeholder="Введите число">
-					<input id="b_number_avg" placeholder="Введите число">
-					<input id="c_number_avg" placeholder="Введите число">
-					<button class="content__button content__button_background-color" onclick="avg_numbers()">Решить задание</button>
-                    <div class="content__assignment-rezult"  id="avg_numbers_rezult"></div>
+					<p>Дано целое число N (> 0). Найти значение выражения 1.1 − 1.2 + 1.3 − . . . (N слагаемых, знаки чередуются). Условный оператор не использовать.</p>
+					<p>Введите целое число.</p>
+                    <input id="int_N_number" placeholder="Введите число">
+					<button class="content__button content__button_background-color" onclick="N_summand_rotate()">Решить задание</button>
+                    <div class="content__assignment-rezult"  id="N_summand_rezult"></div>
 				</div>
 				<div class="content__assignment-code">
 					<code>
+var n_number = document.getElementById("int_N_number").value;
+var rezult = document.getElementById("N_summand_rezult");
+let n = Number(n_number);
 
+if (n_number === '' || isNaN(n) || !(n % 1 === 0) || (n < 0)) {
+    return rezult.innerHTML = "Число не введено или не целое или отрицательное";
+} 
+
+let summand_rotate = 0
+for (let i = 1; i <= n; i+=2) {
+    summand_rotate += 1 + i/10
+}
+for (let j = 2; j <= n; j+=2) {
+    summand_rotate -= 1 + j/10
+}
+rezult.innerHTML = "Сумма знакочередующегося ряда = " + summand_rotate.toFixed(1);
 					</code>
 				</div>
 			</div>
-            <hr class="content__hr-shelf">
-			<div class="content__assignment">
-				<div class="content__assignment-text">
-					<h2><strong>Задание 3</strong></h2>
-					<p>Вычислить значение функции y = f(x) при произвольных значениях x.</p>
-					<img src="../images/equation.jpg" alt="Система уравнений">
-                    <input id="x_for_equation_system" placeholder="Введите число">
-					<button class="content__button content__button_background-color" onclick="equation_system()">Решить задание</button>
-                    <div class="content__assignment-rezult"  id="equation_system_rezult"></div>
-				</div>
-				<div class="content__assignment-code">
-					<code>
-
-					</code>
-				</div>
-			</div> -->
 		</div>
 	</div>
 
@@ -108,7 +128,7 @@
 	</footer>
 
 	<script src="../js/menu_display.js"></script>
-	<!-- <script src="../js/lab3.js"></script> -->
+	<script src="../js/lab4.js"></script>
 </body>
 
 </html>
