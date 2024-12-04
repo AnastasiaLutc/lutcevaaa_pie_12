@@ -45,31 +45,7 @@
     display: none; /* Не отображать кнопку по умолчанию */
 }
 
-@media screen and (max-width: 1200px) {
-    .menu__list {
-        justify-content: space-between;
-        padding: 15px 40px;
-    }
-
-}
-
-@media screen and (max-width: 900px) {
-    .menu__list {
-        justify-content: space-between;
-        padding: 15px 20px;
-    }
-
-    .menu__item {
-        margin: 0 10px;
-    }
-
-}
-
-@media screen and (max-width: 760px) {
-    .menu {
-        min-height: 34px;
-    }
-
+@media screen and (max-width: 1450px) {
     .menu__list {
         display: none;
         flex-direction: column;
@@ -95,6 +71,31 @@
         color: rgba(255, 255, 255, 0.8);
         font-size: 1.5em;
     }
+
+    .menu {
+        min-height: 36px;
+    }
+
+}
+
+/* @media screen and (max-width: 900px) {
+    .menu__list {
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+
+    .menu__item {
+        margin: 0 10px;
+    }
+
+} */
+
+@media screen and (max-width: 760px) {
+    .menu {
+        min-height: 34px;
+    }
+
+    
 }
 
 @media screen and (max-width: 320px) {

@@ -21,6 +21,8 @@
 				<li class="menu__item"><a class="menu__link" href="../pages/lab3.html">Лабораторная 3</a></li>
 				<li class="menu__item"><a class="menu__link" href="../pages/lab4.html">Лабораторная 4</a></li>
                 <li class="menu__item"><a class="menu__link" href="../pages/lab5.html">Лабораторная 5</a></li>
+				<li class="menu__item"><a class="menu__link" href="../pages/lab6.html">Лабораторная 6</a></li>
+				<li class="menu__item"><a class="menu__link" href="../pages/lab7.html">Лабораторная 7</a></li>
 			</ul>
 			<button class="menu__hamburger" onclick="changing_display()">☰</button>
 		</nav>
@@ -28,16 +30,32 @@
 		<p class="header__game-title">Визуальная новелла по книге <strong>"Благие знамения"</strong> Т.Пратчетта и Н.Геймана.</p>
 	</header>
 
-    <div class="game game_background">
-        <img src="../images/game/" alt="Добро пожаловать в Англию">
-        <div id="text-box">
-            <p class="game__story-text" id="story-text">Добро пожаловать в Англию! Через два дня наступит Армагедон. Надеюсь, ты успеешь посетить все достопримечательности.</p>
-        </div>
-        <div id="choices">
-            <button class="game__button" id="choise1" onclick="getButton(0)">Начать историю</button>
-            <button class="game__button game__button_display-none" id="choise2" onclick="getButton(2)">Выбор 2</button>
-            <button class="game__button game__button_display-none" id="choise3" onclick="getButton(4)">Выбор 3</button>
-        </div>
+    <div class="game game_background game_padding">
+		<div class="game__box_size-40">
+			<img src="../images/game/first.png" alt="Добро пожаловать в Англию" id="scene-image">
+		</div>
+        <div id="text-box" class="game__box_size-60 ">
+            <p class="game__story-text" id="story-text">Добро пожаловать в Англию! Завтра в три часа дня наступит Армагедон. Предотврати его или не успеешь посетить все достопримечательности 😈</p>
+			<div class="game__story-text" id="main-role">
+				<p class="game__main-role">В ГЛАВНЫХ РОЛЯХ </p>
+				<p class="game__main-role">Адам (Антихрист), по совместительству Ты.</p>
+				<p class="game__main-role">Эти</p>
+				<p class="game__main-role">Пеппер (девочка), Уэнслидэйл (мальчик), Брайан (мальчик) + Адам</p>
+				<p class="game__main-role">Сверхъестественные существа</p>
+				<p class="game__main-role">Метатрон (Глас Божий), Азирафаэль (ангел и по совместительству букинист), Вельзевул (падший ангел и князь преисподней), Кроули (ангел, не столько падший, сколько катившийся по наклонной)</p>
+				<p class="game__main-role">Всадники Апокалипсиса</p>
+				<p class="game__main-role">Смерть (Смерть), Война (Война), Голод (Голод), Загрязнение (Загрязнение)</p>
+				<p class="game__main-role">Люди</p>
+				<p class="game__main-role">Анафема Гаджет (практикующая оккультистка, не так по призванию, как по наследству)</p>
+			</div>
+
+			<div>
+				<button class="game__button" id="choise1" onclick="getButton(0)">Начать историю</button>
+				<button class="game__button game__button_display-none" id="choise2" onclick="getButton(2)">Выбор 2</button>
+				<button class="game__button game__button_display-none" id="choise3" onclick="getButton(4)">Выбор 3</button>
+			</div>
+		</div>
+        
     </div>
 
     <footer class="footer">
@@ -45,11 +63,12 @@
 			<ul class="footer__list">
 				<li class="footer__item">Полный код: <a class="footer__link"
 						href="https://github.com/AnastasiaLutc/lutcevaaa_pie_12">GitHub</a></li>
-				<li class="footer__item">© Лютцева, 2024</a></li>
+				<li class="footer__item">© Лютцева А., 2024</a></li>
 			</ul>
 		</div>
 	</footer>
 
     <script src="../js/game.js"></script>
+	<script src="../js/menu_display.js"></script>
 </body>
 </html>

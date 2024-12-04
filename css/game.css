@@ -1,23 +1,34 @@
 
 .header__game-background {
     height: 7em;
-    background-color: #292828;
+    /* background-color: #292828; */
+    background: url("../images/game/baner.png");
     align-items: flex-end;
+    background-size: 100% 100%;
 }
 .header__game-title {
-    color: rgba(255, 255, 255, 0.69);
+    color: #f3f3f3;
     margin-top: 70px;
     text-align: center;
     letter-spacing: 0.1em;
-    font-size: 16px;
+    font-size: 18px;
     font-family: 'PT Serif', serif;
     font-weight: 400;
 }
 
 .game {
-    /* display: flex;
-    flex-direction: column; */
-    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.game_padding {
+    padding: 20px 70px;
+}
+.game__box_size-40 {
+    width: 40%;
+}
+.game__box_size-60 {
+    width: 60%;
 }
 .game_background {
     background: #f3f3f3;
@@ -25,12 +36,16 @@
 .game__story-text {
     font-family: 'PT Serif', serif;
     font-size: 18px;
-    margin: 20px;
-    text-indent: 14px;
+    margin: 20px 0 20px 40px;
+}
+.game__main-role {
+    margin: 8px 20px 0;
+    font-size: 15px;
 }
 .game__button {
     display: block;
-    background-color: #383132;
+    background-color: #65565E;
+    /* background-color: #242A38; */
     color: #fff;
     padding: 10px;
     font-family: 'PT Serif', serif;
@@ -42,10 +57,122 @@
     cursor: pointer;
     transition: background 0.3s ease, box-shadow 0.3s ease;
     border: none;
-    margin: 20px;
-    width: 70%;
+    margin: 15px 0 15px 40px;
 }
 .game__button_display-none {
     display: none;
 }
 
+img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* Разрешение 1200px */
+@media (max-width: 1200px) {
+    .game_padding {
+        padding: 20px 50px;
+    }
+    .game__story-text {
+        font-size: 16px;
+        margin: 15px 0 15px 30px;
+    }
+    .game__main-role {
+        font-size: 14px;
+        margin: 8px 15px 0;
+    }
+    .game__button {
+        margin: 10px 0 10px 30px;
+        font-size: 13px;
+    }
+}
+
+/* Разрешение 900px */
+@media (max-width: 900px) {
+    .game {
+        flex-direction: column; 
+    }
+    .game_padding {
+        padding: 20px 40px;
+    }
+    .game__box_size-40, .game__box_size-60 {
+        width: 100%;
+    }
+    .game__box_size-40 {
+        text-align: center;
+    }
+    .game__story-text {
+        margin: 15px 0;
+    }
+    .game__button {
+        margin: 10px 0;
+        font-size: 12px;
+    }
+    img {
+        width: 70%;
+    }
+}
+
+/* Разрешение 750px */
+@media (max-width: 750px) {
+    .game_padding {
+        padding: 15px 30px;
+    }
+    .header__game-title {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .game__story-text {
+        font-size: 15px;
+    }
+    .game__main-role {
+        font-size: 13px;
+    }
+    .game__button {
+        font-size: 12px;
+    }
+    img {
+        width: 75%;
+    }
+}
+
+/* Разрешение 480px */
+@media (max-width: 480px) {
+    .game_padding {
+        padding: 10px 20px;
+    }
+    .header__game-background {
+        height: 7.5em;
+    }
+    .header__game-title {
+        font-size: 16px;
+    }
+    .game__story-text {
+        font-size: 14px;
+    }
+    .game__main-role {
+        font-size: 12px;
+    }
+    .game__button {
+        font-size: 11px;
+    }
+}
+
+/* Разрешение 320px */
+@media (max-width: 320px) {
+    .game_padding {
+        padding: 10px;
+    }
+    .game__story-text {
+        font-size: 14px;
+    }
+    .game__main-role {
+        font-size: 11px;
+    }
+    .game__button {
+        font-size: 10px;
+    }
+    .header__game-title {
+        margin-top: 60px;
+    }
+}
