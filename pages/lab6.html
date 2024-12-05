@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продукты</title>
+	<link rel="stylesheet" href="../css/shop.css">
+</head>
+<body>
+	<script src="../js/lab6_api.js"></script>
+
+    <h1>Список товаров</h1>
+	<input type="search" id="search" placeholder="Поиск">
+    <div class="product-container" id="product-container"></div>
+	<!-- <script>
+        fetch('https://dummyjson.com/products')
+            .then(res => res.json())
+            .then(json => {
+                console.log(json); // Логируем все данные для проверки
+
+                // Фильтруем товары с 60 по 90
+                const products = json.products.slice(59, 90);
+
+                // Контейнер для товаров
+                const container = document.getElementById('product-container');
+
+                // Отображаем товары на странице
+                products.forEach(product => {
+                    const productElement = document.createElement('div');
+                    productElement.classList.add('product');
+                    productElement.innerHTML = `
+                        <img src="${product.thumbnail}" alt="${product.title}">
+                        <h3>${product.title}</h3>
+                        <p>${product.description}</p>
+                        <div class="price">$${product.price}</div>
+                    `;
+                    container.appendChild(productElement);
+                });
+            })
+            .catch(error => console.error('Ошибка при загрузке данных:', error));
+    </script> -->
+</body>
+</html>
