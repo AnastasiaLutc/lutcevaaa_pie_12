@@ -1,0 +1,135 @@
+.header__shop-background {
+    height: 12em;
+    background: url("../images/banner.jpg") center center;
+    background-size: cover;
+    background-position: center;
+}
+
+.header__shop-title {
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.8em;
+    letter-spacing: 0.25em;
+    margin: 1.5em 0 1em 0;
+}
+
+.header__shop-author {
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    margin: 1em 0;
+    display: block;
+    letter-spacing: 0.2em;
+    font-size: 1em;
+}
+
+.content-shop {
+    position: relative;
+}
+
+.content-shop_sizes {
+    padding: 20px 30px;
+    min-height: 410px;
+}
+
+.content-shop__product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.content-shop__product {
+    padding: 10px;
+}
+
+.content-shop__product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background-color: #eeeeee;
+    text-align: center;
+}
+
+.content-shop__product_prod-title {
+    font-size: 18px;
+    margin: 10px 0;
+    text-decoration: none;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.content-shop__product_prod-title:hover {
+    color: #555;
+    border-bottom: 1px solid #555555b4;
+}
+
+.content-shop__product p {
+    font-size: 14px;
+    color: #555;
+}
+
+.content-shop__product strong {
+    color: #000;
+}
+
+.content-shop__filters,
+.content-shop__search {
+    padding: 0 10px;
+    height: fit-content;
+}
+
+.content-shop__button {
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #404040;
+    margin: 0 10px 0 0;
+}
+
+.content-shop__button:hover {
+    background-color: #d6d6d6;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.content-shop__button:active {
+    background-color: #adadad;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.content-shop__search input {
+    color: #292828;
+    background-color: #ffffff;
+    padding: 3px 10px;
+    border-radius: 10px;
+    margin-right: 20px;
+    height: 20px;
+}
+
+.content-shop__filters-and-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+hr {
+    margin: 20px 0;
+    padding: 0;
+    height: 10px;
+    border: none;
+    border-top: 1px solid #333;
+    box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}
+
+.content-shop__inform p {
+    font-size: 13px;
+    margin: 10px 0;
+    color: #555;
+    display: flex;
+    flex-direction: row-reverse;
+}

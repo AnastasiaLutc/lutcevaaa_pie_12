@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+
+<head>
+	<title>ИСП лабораторные работы</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/header.css">
+	<link rel="stylesheet" href="../css/menu.css">
+	<link rel="stylesheet" href="../css/contents.css">
+	<link rel="stylesheet" href="../css/footer.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/shop.css">
+</head>
+
+<body>
+	<script src="../js/lab6_api.js"></script>
+	<script src="../js/menu_display.js"></script>
+
+	<header class="header header__shop-background">
+		<nav class="menu" id="display_nav">
+			<ul class="menu__list">
+				<li class="menu__item"><a class="menu__link" href="../index.html">Главная</a></li>
+				<li class="menu__item"><a class="menu__link" href="../pages/lab2.html">Лабораторная 2</a></li>
+				<li class="menu__item"><a class="menu__link" href="../pages/lab3.html">Лабораторная 3</a></li>
+				<li class="menu__item"><a class="menu__link" href="../pages/lab4.html">Лабораторная 4</a></li>
+				<li class="menu__item"><a class="menu__link" href="../pages/lab5.html">Лабораторная 5</a></li>
+				<li class="menu__item"><a class="menu__link" href="../pages/lab6.html">Лабораторная 6</a></li>
+				<li class="menu__item"><a class="menu__link" href="../pages/lab7.html">Лабораторная 7</a></li>
+			</ul>
+			<button class="menu__hamburger" onclick="changing_display()">☰</button>
+		</nav>
+
+		<div class="header__content">
+			<h1 class="header__shop-title">Работа с API</h1>
+			<p class="header__shop-author">Лютцева Анастасия гр. ПИЭ-12 вариант-13</p>
+		</div>
+	</header>
+
+	<div class="content-shop content-shop_sizes">
+		<div class="content-shop__filters-and-search">
+			<div class="content-shop__filters">
+				<button class="content-shop__button">Пол +</button>
+				<button class="content-shop__button">Размер +</button>
+				<button class="content-shop__button">Цвет +</button>
+				<button class="content-shop__button">Сезон +</button>
+			</div>
+			<div class="content-shop__search">
+				<input id="search" placeholder="Поиск">
+				<button class="content-shop__button" onclick="search_product()">Поиск</button>
+				<button class="content-shop__button" onclick="clean_product()">Очистить</button>
+			</div>
+		</div>
+		<hr>
+		<div class="content-shop__inform" id="inform-container"></div>
+		<div class="content-shop__product-container" id="product-container"></div>
+	</div>
+
+	<footer class="footer">
+		<div class="footer__content">
+			<ul class="footer__list">
+				<li class="footer__item">Полный код: <a class="footer__link"
+						href="https://github.com/AnastasiaLutc/lutcevaaa_pie_12">GitHub</a></li>
+				<li class="footer__item">© Лютцева А., 2024</a></li>
+			</ul>
+		</div>
+	</footer>
+
+</body>
+
+</html>

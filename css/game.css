@@ -1,11 +1,10 @@
-
 .header__game-background {
     height: 7em;
-    /* background-color: #292828; */
     background: url("../images/game/baner.png");
     align-items: flex-end;
     background-size: 100% 100%;
 }
+
 .header__game-title {
     color: #f3f3f3;
     margin-top: 70px;
@@ -21,27 +20,34 @@
     flex-direction: row;
     align-items: center;
 }
+
 .game_padding {
     padding: 20px 70px;
 }
+
 .game__box_size-40 {
     width: 40%;
 }
+
 .game__box_size-60 {
     width: 60%;
 }
+
 .game_background {
     background: #f3f3f3;
 }
+
 .game__story-text {
     font-family: 'PT Serif', serif;
     font-size: 18px;
     margin: 20px 0 20px 40px;
 }
+
 .game__main-role {
     margin: 8px 20px 0;
     font-size: 15px;
 }
+
 .game__button {
     display: block;
     background-color: #65565E;
@@ -59,6 +65,17 @@
     border: none;
     margin: 15px 0 15px 40px;
 }
+
+.game__button:hover {
+    background-color: #6a535e;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.game__button:active {
+    background-color: #55454e;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
 .game__button_display-none {
     display: none;
 }
@@ -73,14 +90,17 @@ img {
     .game_padding {
         padding: 20px 50px;
     }
+
     .game__story-text {
         font-size: 16px;
         margin: 15px 0 15px 30px;
     }
+
     .game__main-role {
         font-size: 14px;
         margin: 8px 15px 0;
     }
+
     .game__button {
         margin: 10px 0 10px 30px;
         font-size: 13px;
@@ -90,24 +110,31 @@ img {
 /* Разрешение 900px */
 @media (max-width: 900px) {
     .game {
-        flex-direction: column; 
+        flex-direction: column;
     }
+
     .game_padding {
         padding: 20px 40px;
     }
-    .game__box_size-40, .game__box_size-60 {
+
+    .game__box_size-40,
+    .game__box_size-60 {
         width: 100%;
     }
+
     .game__box_size-40 {
         text-align: center;
     }
+
     .game__story-text {
         margin: 15px 0;
     }
+
     .game__button {
         margin: 10px 0;
         font-size: 12px;
     }
+
     img {
         width: 70%;
     }
@@ -118,19 +145,24 @@ img {
     .game_padding {
         padding: 15px 30px;
     }
+
     .header__game-title {
         margin-left: 20px;
         margin-right: 20px;
     }
+
     .game__story-text {
         font-size: 15px;
     }
+
     .game__main-role {
         font-size: 13px;
     }
+
     .game__button {
         font-size: 12px;
     }
+
     img {
         width: 75%;
     }
@@ -141,18 +173,23 @@ img {
     .game_padding {
         padding: 10px 20px;
     }
+
     .header__game-background {
         height: 7.5em;
     }
+
     .header__game-title {
         font-size: 16px;
     }
+
     .game__story-text {
         font-size: 14px;
     }
+
     .game__main-role {
         font-size: 12px;
     }
+
     .game__button {
         font-size: 11px;
     }
@@ -163,15 +200,19 @@ img {
     .game_padding {
         padding: 10px;
     }
+
     .game__story-text {
         font-size: 14px;
     }
+
     .game__main-role {
         font-size: 11px;
     }
+
     .game__button {
         font-size: 10px;
     }
+
     .header__game-title {
         margin-top: 60px;
     }
