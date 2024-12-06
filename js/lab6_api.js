@@ -48,7 +48,7 @@ function display_products(products) {
 function search_product() {
     var search = document.getElementById('search');
     var search_text = search.value.toLowerCase();
-    if (search_text == '') {
+    if (search_text == '' || search_text == ' ') {
         var filter_products = ["пусто"];
     } else {
         var filter_products = products_data.filter(item => item.description.includes(search_text) || item.title.includes(search_text));
