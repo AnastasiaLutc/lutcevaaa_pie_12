@@ -137,6 +137,28 @@ hr {
     flex-direction: row-reverse;
 }
 
+.card {
+    position: fixed;
+    z-index: 1010;
+    background-color: #333;
+    width: 70%;
+    height: auto;
+    color: #fff;
+}
+.popup__close, .close {
+    z-index: 1;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 0;
+    line-height: 1;
+    display: inline-block;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+}
 
 
 /* 1200px */
@@ -231,6 +253,10 @@ hr {
         font-size: 0.7em;
     }
 
+    .content-shop__filters-and-search {
+        flex-direction: column;
+    }
+
     .content-shop__button {
         padding: 5px 8px;
         margin: 0 5px 5px 0;
@@ -241,15 +267,14 @@ hr {
     }
 
     .content-shop__search input {
-        margin: 0 0 5px;
-        width: 80%;
+        margin: 0 10px 0 0;
     }
 
     .content-shop__search {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
-
+        margin-top: 5px;
     }
 
     hr {
@@ -296,6 +321,10 @@ hr {
 
     .content-shop__button {
         margin: 0 3px 5px 0;
+    }
+
+    .content-shop__search {
+        justify-content: flex-start;
     }
 
     .content-shop__search input {

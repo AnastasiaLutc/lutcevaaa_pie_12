@@ -36,9 +36,8 @@ function display_products(products) {
             var products_elem = document.createElement('div');
             products_elem.classList.add('content-shop__product');
             products_elem.innerHTML = `
-            <img src="${products[i].thumbnail}" alt="${products[i].title}">
-            <a href="#" class="content-shop__product_prod-title"><strong>${products[i].title}</strong></a>
-            <p>${products[i].description}</p>
+            <img src="${products[i].thumbnail}" alt="${products[i].title}" onclick="open_card(${products[i].id})">
+            <a href="#" class="content-shop__product_prod-title" onclick="open_card(${products[i].id})"><strong>${products[i].title}</strong></a>
             <p><strong>$${products[i].price}</strong></p>`;
             container.appendChild(products_elem);
         }
@@ -51,7 +50,7 @@ function search_product() {
     if (search_text == '' || search_text == ' ') {
         var filter_products = ["пусто"];
     } else {
-        var filter_products = products_data.filter(item => item.description.includes(search_text) || item.title.includes(search_text));
+        var filter_products = products_data.filter(item => (item.description.toLowerCase().includes(search_text) || item.title.toLowerCase().includes(search_text)));
         // console.log(filter_products);
     }
     display_products(filter_products);
@@ -61,4 +60,24 @@ function clean_product() {
     var input = document.getElementById('search');
     input.value = '';
     display_products(products_data.slice(164, 194));
+}
+
+function open_card(id) {
+    var container = document.getElementById('product-container');
+    var products_elem = document.createElement('div');
+    products_elem.classList.add('card');
+    products_elem.id = 'card_of_product';
+    products_elem.innerHTML = `
+            <img src="${products_data[id-1].thumbnail}" alt="${products_data[id-1].title}">
+            <a href="#" class="popup__close close" onclick="close_card('card_of_product')">⨉</a>
+            <a href="#" class="content-shop__product_prod-title"><strong>${products_data[id-1].title}</strong></a>
+            <p>${products_data[id-1].description}</p>
+            <p><strong>$${products_data[id-1].price}</strong></p>`;
+    container.appendChild(products_elem);
+}
+
+function close_card(id) {
+    var container = document.getElementById('product-container');
+    var card = document.getElementById(id);
+    container.removeChild(card);
 }
