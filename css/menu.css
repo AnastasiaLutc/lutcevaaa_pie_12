@@ -42,15 +42,16 @@
 }
 
 .menu__hamburger {
-    display: none; /* Не отображать кнопку по умолчанию */
+    display: none;
+    /* Не отображать кнопку по умолчанию */
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1300px) {
     .menu__list {
         display: none;
         flex-direction: column;
     }
-    
+
     .menu__link {
         font-size: 0.8em;
     }
@@ -64,42 +65,37 @@
     .menu__hamburger {
         position: absolute;
         right: 10px;
-        top: 10px;
+        top: 5px;
         display: block;
         background: none;
         border: none;
         color: rgba(255, 255, 255, 0.8);
-        font-size: 1.5em;
+        font-size: 32px;
     }
 
     .menu {
         min-height: 36px;
     }
-
 }
 
-/* @media screen and (max-width: 900px) {
-    .menu__list {
-        justify-content: space-between;
-        padding: 15px 20px;
-    }
-
-    .menu__item {
-        margin: 0 10px;
-    }
-
-} */
 
 @media screen and (max-width: 760px) {
     .menu {
         min-height: 34px;
     }
 
-    
+    .menu__hamburger {
+        font-size: 28px;
+    }
+
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 420px) {
     .menu {
         min-height: 28px;
+    }
+
+    .menu__hamburger {
+        font-size: 24px;
     }
 }
