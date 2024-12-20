@@ -1,0 +1,118 @@
+
+.owerlay {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: #cecece6f; 
+    z-index: 1005;
+}
+
+.card {
+    position: fixed;
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    z-index: 1100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.card_flex {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.card__column {
+    width: 50%;
+}
+.card__column-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background-color: #F4F4F4;
+    text-align: center;
+}
+.card i {
+    margin-left: auto;
+    font-size: 20px;
+}
+.card__title {
+    font-family: "Squada One", serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin: 24px 0 10px;
+}
+
+.card__tags {
+    padding: 8px;
+    margin-right: 10px;
+    border: 2px solid #ddd;
+    background-color: #ffffff;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.card__tags:active {
+    background-color: #adadad;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card__button-buy,
+.card__button-create {
+    font-family: "Squada One", serif;
+    padding: 14px;
+    border: 2px solid #ddd;
+    background-color: #F4F4F4;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: auto;
+    margin-top: auto;
+}
+
+.card__button-buy:active,
+.card__button-create:active {
+    background-color: #adadad;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.create_product {
+    display: flex;
+    flex-direction: column;
+}
+.create_product i {
+    margin-left: auto;
+    font-size: 20px;
+}
+.create_title {
+    font-family: "Squada One", serif;
+    padding: 24px;
+    margin: 0;
+}
+.create_prod_input {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+.create_prod_input input {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.create_prod_input p {
+    font-weight: 600;
+}

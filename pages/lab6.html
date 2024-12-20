@@ -5,54 +5,74 @@
 	<title>ИСП лабораторные работы</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="../css/header.css">
-	<link rel="stylesheet" href="../css/menu.css">
-	<link rel="stylesheet" href="../css/contents.css">
-	<link rel="stylesheet" href="../css/footer.css">
-	<link rel="stylesheet" href="../css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/shop_menu.css">
+	<link rel="stylesheet" href="../css/shop_styles.css">
 	<link rel="stylesheet" href="../css/shop.css">
+	<link rel="stylesheet" href="../css/shop_card.css">
 </head>
 
 <body>
 	<script src="../js/lab6_api.js"></script>
 	<script src="../js/menu_display.js"></script>
 
-	<header class="header header__shop-background">
-		<nav class="menu" id="display_nav">
+	<header class="menu">
+		<div class="menu__logo"><a class="menu__link" href="../index.html">Lutce</a></div>
+		<nav id="display_nav" class="menu">
 			<ul class="menu__list">
-				<li class="menu__item"><a class="menu__link" href="../index.html">Главная</a></li>
-				<li class="menu__item"><a class="menu__link" href="../pages/lab2.html">Лабораторная 2</a></li>
-				<li class="menu__item"><a class="menu__link" href="../pages/lab3.html">Лабораторная 3</a></li>
-				<li class="menu__item"><a class="menu__link" href="../pages/lab4.html">Лабораторная 4</a></li>
-				<li class="menu__item"><a class="menu__link" href="../pages/lab5.html">Лабораторная 5</a></li>
-				<li class="menu__item"><a class="menu__link" href="../pages/lab6.html">Лабораторная 6</a></li>
-				<li class="menu__item"><a class="menu__link" href="../pages/lab7.html">Лабораторная 7</a></li>
+				<li class="menu__item"><a href="../pages/lab2.html">Лабораторная 2</a></li>
+				<li class="menu__item"><a href="../pages/lab3.html">Лабораторная 3</a></li>
+				<li class="menu__item"><a href="../pages/lab4.html">Лабораторная 4</a></li>
+				<li class="menu__item"><a href="../pages/lab5.html">Лабораторная 5</a></li>
+				<li class="menu__item"><a href="../pages/lab6.html">Лабораторная 6-7</a></li>
 			</ul>
-			<button class="menu__hamburger" onclick="changing_display()">☰</button>
 		</nav>
-
-		<div class="header__content">
-			<h1 class="header__shop-title">Работа с API</h1>
-			<p class="header__shop-author">Лютцева Анастасия гр. ПИЭ-12 вариант-13</p>
+		<div class="menu__icons">
+			<a href="#" class="menu__icon" title="Search"><i class="fas fa-search"></i></a>
+			<a href="#" class="menu__icon" title="Cart"><i class="fas fa-shopping-cart"></i></a>
+			<a href="#" class="menu__icon" title="Profile"><i class="fas fa-user"></i></a>
+			<button class="menu__hamburger" onclick="changing_display()">☰</button>
 		</div>
 	</header>
 
 	<div class="content-shop content-shop_sizes">
-		<div class="content-shop__filters-and-search">
-			<div class="content-shop__filters">
-				<button class="content-shop__button">Пол +</button>
-				<button class="content-shop__button">Размер +</button>
-				<button class="content-shop__button">Цвет +</button>
-				<button class="content-shop__button">Сезон +</button>
+		<div class="container-filter">
+			<div class="container-filter__link-chain">
+				<a href="../index.html">Home /</a> <a href="../index.html">Labs /</a> Laboratory 6-7
 			</div>
-			<div class="content-shop__search">
-				<input id="search" placeholder="Поиск">
-				<button class="content-shop__button" onclick="search_product()">Поиск</button>
-				<button class="content-shop__button" onclick="clean_product()">Очистить</button>
+
+			<h1 class="container-filter__title">Products Collection</h1>
+			<hr class="content-shop__hr">
+			<div class="container-filter__filter">
+				<p>Filter by</p>
+				<div class="container-filter__filters">
+					<select class="container-filter__button"><option>Size</option></select>
+					<select class="container-filter__button"><option>Color</option></select>
+					<select class="container-filter__button"><option>Gender</option></select>
+					<select class="container-filter__button"><option>Price</option></select>
+					<select class="container-filter__button"><option>Activity</option></select>
+					<select class="container-filter__button"><option>Weight</option></select>
+					<select class="container-filter__button"><option>Type</option></select>
+					<button class="container-filter__button-clean">Filter 2 <i class="fa-solid fa-xmark"></i></button>
+				</div>
 			</div>
 		</div>
-		<hr>
+		<div class="content-shop__search">
+			<div>
+				<button class="content-shop__search_margin">Extra Large <i class="fa-solid fa-xmark"></i></button>
+				<button class="content-shop__search_margin">$10 - $400 <i class="fa-solid fa-xmark"></i></button>
+			</div>
+			<div>
+				<input id="search" placeholder="Поиск">
+				<button class="content-shop__search_margin button-action" onclick="search_product()">Поиск</button>
+				<button class="content-shop__search_margin button-action" onclick="clean_product()">Очистить</button>
+				<button class="button-action" onclick="add_product()">Добавить товар</button>
+			</div>
+		</div>
+		<hr class="content-shop__hr content-shop__hr_margin">
 		<div class="content-shop__inform" id="inform-container"></div>
 		<div class="content-shop__product-container" id="product-container"></div>
 	</div>
