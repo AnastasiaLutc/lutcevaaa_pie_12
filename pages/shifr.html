@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+
+<body>
+    <input type="text" id="input">
+    <button onclick="shifrator()">Шифровать</button>
+    <p id="shifr"></p>
+    <button onclick="leaky_array()">Массив</button>
+    <canvas id="canvas" width="500" height="320"></canvas>
+
+    <script lang="js">
+
+
+        function shifrator() {
+            var matrix = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+            console.log(matrix.length);
+            var word = document.getElementById('input').value.toLowerCase();
+            var rezult = document.getElementById('shifr');
+            var shifr = '';
+
+            for (let i = 0; i < word.length; i++) {
+                for (let j = 0; j < matrix.length; j++) {
+                    if (word[i] === matrix[j]) {
+                        if (j < 10) {
+                            var cod = String(0).concat(String(j));
+                        } else {
+                            var cod = String(j)
+                        }
+                        shifr = shifr.concat(cod);
+                    }
+
+                }
+            }
+            console.log(shifr);
+            rezult.innerHTML = shifr;
+        }
+
+        function leaky_array() {
+            var canvas = document.getElementById('canvas');
+            var context = canvas.getContext('2d');
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            var array2d = [];
+            for (let i = 0; i < 10; i++) {
+                var array1d = [];
+                for (let j = 0; j < 10; j++) {
+                    array1d.push(Math.floor(Math.random() * 10));
+                }
+                array2d.push(array1d);
+            }
+            console.log(array2d);
+
+            context.font = '20px Arial';
+            for (let k = 0; k < 10; k++) {
+                for (let l = 0; l < 10; l++) {
+                    if (array2d[k][l] % 2 == 0) {
+                        array2d[k][l] = 0;
+                        context.fillStyle = "white";
+                        context.strokeStyle = "black";
+                    } else {
+                        context.fillStyle = "black";
+                        context.strokeStyle = "black";
+                    }
+                    context.fillText(array2d[k][l], l * 30 + 10, k * 30 + 30);
+                    context.strokeRect(l * 30, k * 30 + 5, 30, 30);
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

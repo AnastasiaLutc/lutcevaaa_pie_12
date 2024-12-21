@@ -158,9 +158,9 @@ function post_product(id, title, price) {
         .then(res => res.json())
         .then(data => {
             new_products.push(data);
-            console.log('Updated Array:', new_products); 
+            console.log('Updated Array:', new_products);
         })
         .then(console.log);
-    
+
     limit_products += 1;
 }
